@@ -25,7 +25,7 @@ const Home = () => {
 
           <div>
             <Link
-              to="Portfolio"
+              to="Work Experiences"
               smooth
               duration={500}
               className="group text-white w-fit px-6 py-4 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer"
