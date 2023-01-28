@@ -1,22 +1,18 @@
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Experience from "./components/Experience";
-import Home from "./components/Home";
-import NavBar from "./components/NavBar";
-import WorkExperiences from "./components/WorkExperiences";
-import SocialLinks from "./components/SocialLinks";
+import HomePage from "./components/pages/HomePage";
+import { Routes, Route } from 'react-router-dom';
+import Journey from './components/pages/Journey';
+import Sidebar from './components/Sidebar';
+import ErrorPage from "./components/pages/ErrorPage";
 
 function App() {
   return (
     <div>
-      <NavBar />
-      <Home />
-      <About />
-      <WorkExperiences />
-      <Experience />
-      <Contact />
-
-      <SocialLinks />
+      {/* <Sidebar /> */}
+      <Routes>
+        <Route exact path='/journey-gallery' element={<HomePage />} />
+        <Route path='/journey' element={<Journey />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
     </div>
   );
 }
