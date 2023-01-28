@@ -1,9 +1,9 @@
 import React from "react";
-import HeroImage from "../assets/heroImage.jpg";
+import HeroImage from "../../assets/heroImage.jpg";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-scroll";
 
-const Home = () => {
+const Introduce = () => {
   return (
     <div
       name="Home"
@@ -50,4 +50,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Introduce;
