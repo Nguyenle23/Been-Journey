@@ -8,7 +8,7 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route exact path='/journey-gallery/client/build' element={<HomePage />} />
+        <Route exact path='/journey-gallery' element={<HomePage />} />
         <Route path='/journey' element={<Journey />} />
         <Route path='/test' element={<Test />} />
         <Route path="*" element={<ErrorPage />} />
