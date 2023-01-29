@@ -1,16 +1,16 @@
 import HomePage from "./components/pages/HomePage";
 import { Routes, Route } from 'react-router-dom';
 import Journey from './components/pages/Journey';
-import Sidebar from './components/Sidebar';
 import ErrorPage from "./components/pages/ErrorPage";
+import Test from "./components/Test";
 
 function App() {
   return (
     <div>
-      {/* <Sidebar /> */}
       <Routes>
         <Route exact path='/journey-gallery' element={<HomePage />} />
         <Route path='/journey' element={<Journey />} />
+        <Route path='/test' element={<Test />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>
