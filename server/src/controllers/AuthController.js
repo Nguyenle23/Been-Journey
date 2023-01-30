@@ -6,7 +6,7 @@ const CLIENTSCERET = "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";
 const REDIRECTURL = "http://localhost:5000/auth/google";
 const API_KEY = "AIzaSyB6kME70IBmkmYru_9CnY19kdGowKGLLVU";
 
-function getTokens({ code, clientId, ClientSecret, redirectUri }){
+function getTokens({ code, clientId, ClientSecret, redirectUri }) {
   const url = "https://oauth2.googleapis.com/token";
   const values = {
     code,
@@ -60,7 +60,7 @@ module.exports = {
       refresh_token: tokensRes.refresh_token
     });
 
-    const googleUser = await axios
+    const resourceGoogle = await axios
       .get(
         `https://photoslibrary.googleapis.com/v1/albums?key=${API_KEY}`,
         {
@@ -70,16 +70,14 @@ module.exports = {
         }
       )
       .then(
-        (res) => {
-          return res.data;
+        (result) => {
+          return result.data
         }
       )
       .catch((error) => {
-        console.error(`Failed to fetch user`);
+        console.error(`Failed to fetch resources`);
         throw new Error(error.message);
       });
-
-    const result = googleUser
-    res.send(result);
+    return res.send(resourceGoogle);
   },
 }
