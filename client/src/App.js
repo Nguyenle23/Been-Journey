@@ -11,7 +11,7 @@ function App() {
         <Route exact path='/journey-gallery' element={<HomePage />} />
         <Route path='/journey' element={<Journey />} />
         <Route path='/test' element={<Test />} />
-        <Route path="*" element={<ErrorPage />} />
+        {/* <Route path="*" element={<ErrorPage />} /> */}
       </Routes>
     </div>
   );
