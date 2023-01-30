@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { MdOutlineDashboard } from "react-icons/md";
 import { RiSettings4Line, RiCastFill } from "react-icons/ri";
 import { AiOutlineUser, AiOutlineHeart } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { loginWithGoogle } from "../../apis";
 
 const Journey = () => {
   const menus = [
@@ -60,6 +61,13 @@ const Journey = () => {
     },
   ];
 
+  const handleSignIn = (e) => {
+    e.preventDefault();
+    loginWithGoogle().then((res) => {
+      window.location.href = res;
+    });
+  };
+
   return (
     <section className="flex gap-6 bg-gray-800">
       <div
@@ -111,6 +119,14 @@ const Journey = () => {
           open ? "ml-64 mr-8" : "ml-32"
         } duration-500`}
       >
+        <div>
+          <button
+            onClick={handleSignIn}
+            className="text-white mb-4 p-4 bg-slate-500 hover:bg-slate-600"
+          >
+            SignIn
+          </button>
+        </div>
         <div className="grid grid-cols-1 gap-6 mb-6 lg:grid-cols-3">
           {resources?.map(({ id, name, src, alt }) => (
             <div
