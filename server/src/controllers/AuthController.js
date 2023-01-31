@@ -1,5 +1,6 @@
 const { google } = require('googleapis');
 const axios = require('axios');
+const Album = require('../models/Album');
 
 const CLIENTID = "618519447606-v77bdn6ojtnjjqr6kv3dmsshd9cc37tn.apps.googleusercontent.com";
 const CLIENTSCERET = "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";
@@ -10,9 +11,9 @@ function getTokens({ code, clientId, ClientSecret, redirectUri }) {
   const url = "https://oauth2.googleapis.com/token";
   const values = {
     code,
-    client_id: "618519447606-v77bdn6ojtnjjqr6kv3dmsshd9cc37tn.apps.googleusercontent.com",
-    client_secret: "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",
-    redirect_uri: "http://localhost:5000/auth/google",
+    client_id: CLIENTID,
+    client_secret: CLIENTSCERET,
+    redirect_uri: REDIRECTURL,
     grant_type: "authorization_code",
   };
   return axios
@@ -32,10 +33,10 @@ function getTokens({ code, clientId, ClientSecret, redirectUri }) {
 
 module.exports = {
   getGoogleAuthURL: async (req, res) => {
-    const rootUrl = "https://accounts.google.com/o/oauth2/v2/auth";
+    const rootUrl = 'https://accounts.google.com/o/oauth2/v2/auth';
     const options = {
-      redirect_uri: "http://localhost:5000/auth/google",
-      client_id: "618519447606-v77bdn6ojtnjjqr6kv3dmsshd9cc37tn.apps.googleusercontent.com",
+      redirect_uri: REDIRECTURL,
+      client_id: CLIENTID,
       access_type: "offline",
       response_type: "code",
       prompt: "consent",
@@ -71,13 +72,21 @@ module.exports = {
       )
       .then(
         (result) => {
-          return result.data
+          return result.data;
         }
       )
       .catch((error) => {
         console.error(`Failed to fetch resources`);
         throw new Error(error.message);
       });
-    return res.send(resourceGoogle);
+
+    Album.insertMany(resourceGoogle.albums, function (error, docs) {
+      if (error) {
+        console.log(error);
+      } else {
+        console.log("Multiple documents inserted to Collection");
+      }
+    });
+    res.send(resourceGoogle.albums);
   },
 }
