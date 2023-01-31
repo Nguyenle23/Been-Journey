@@ -63,7 +63,7 @@ module.exports = {
 
     const resourceGoogle = await axios
       .get(
-        `https://photoslibrary.googleapis.com/v1/albums?key=${API_KEY}`,
+        `https://photoslibrary.googleapis.com/v1/sharedAlbums?key=${API_KEY}`,
         {
           headers: {
             Authorization: `Bearer ${tokensRes.access_token}`,
@@ -80,13 +80,13 @@ module.exports = {
         throw new Error(error.message);
       });
 
-    Album.insertMany(resourceGoogle.albums, function (error, docs) {
+    Album.insertMany(resourceGoogle.sharedAlbums, function (error, docs) {
       if (error) {
         console.log(error);
       } else {
         console.log("Multiple documents inserted to Collection");
       }
     });
-    res.send(resourceGoogle.albums);
+    res.send(resourceGoogle.sharedAlbums);
   },
 }
