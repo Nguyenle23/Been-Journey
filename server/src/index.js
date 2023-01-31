@@ -19,11 +19,6 @@ app.use(session({
   saveUninitialized: false,
 }));
 
-// app.use(function (req, res, next) {
-//   res.header("Access-Control-Allow-Origin", "*");
-//   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-//   next();
-// })
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.json());
@@ -31,17 +26,19 @@ app.use(cors(corsOptions));
 
 routes(app);
 
-app.get('/failed', (req, res) => res.send('You Failed to log in!'));
+app.get('/', (req, res) => res.send('RESTFull API successfully called'));
 
-app.get('/success', (req, res) => {
-  console.log('req', req.user);
-});
+// app.get('/failed', (req, res) => res.send('You Failed to log in!'));
 
-app.get('/test', (req, res) => {
-  if (req.user) {
-    res.send(req.user);
-  }
-});
+// app.get('/success', (req, res) => {
+//   console.log('req', req.user);
+// });
+
+// app.get('/test', (req, res) => {
+//   if (req.user) {
+//     res.send(req.user);
+//   }
+// });
 
 // app.get('/auth', passport.authenticate('google', {
 //   scope:
