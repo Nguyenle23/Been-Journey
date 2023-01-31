@@ -1,24 +1,28 @@
 import React from "react";
+const reactOnMovie = require("../../assets/portfolio/reactOnMovie.png");
+const hotel = require("../../assets/portfolio/hotel.png");
+const app_cal = require("../../assets/portfolio/app_cal.png");
+const game = require("../../assets/portfolio/game.png");
 
 const WorkExperiences = () => {
   const workExperiences = [
     {
       id: 1,
-      src: "https://raw.githubusercontent.com/Nguyenle23/Hotel-Management-System/main/src/public/img/ill_img.png",
+      src: app_cal,
       alt: "Calculator-For-T.M.C",
       demo: "",
       code: "https://github.com/Nguyenle23/Calculator-For-T.M.C",
     },
     {
       id: 2,
-      src: "https://raw.githubusercontent.com/Nguyenle23/Hotel-Management-System/main/src/public/img/ill_img.png",
+      src: reactOnMovie,
       alt: "react-onmovie",
       demo: "",
       code: "https://github.com/Nguyenle23/react-onmovie",
     },
     {
       id: 3,
-      src: "https://raw.githubusercontent.com/Nguyenle23/Hotel-Management-System/main/src/public/img/ill_img.png",
+      src: "https://raw.githubusercontent.com/Nguyenle23/WAD-Project-Course/main/Images/Client/home.png",
       alt: "WAD-Project-Course",
       demo: "",
       code: "https://github.com/Nguyenle23/WAD-Project-Course",
@@ -32,14 +36,14 @@ const WorkExperiences = () => {
     },
     {
       id: 5,
-      src: "https://raw.githubusercontent.com/Nguyenle23/Hotel-Management-System/main/src/public/img/ill_img.png",
+      src: hotel,
       alt: "Hotel-Management-System",
       demo: "https://demo-hotel-live.herokuapp.com/",
       code: "https://github.com/Nguyenle23/Hotel-Management-System",
     },
     {
       id: 6,
-      src: "https://raw.githubusercontent.com/Nguyenle23/Hotel-Management-System/main/src/public/img/ill_img.png",
+      src: game,
       alt: "OOP-Project-Course",
       demo: "",
       code: "https://github.com/Nguyenle23/OOP-Project-Course",
