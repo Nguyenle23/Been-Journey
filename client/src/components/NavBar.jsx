@@ -31,7 +31,8 @@ const NavBar = () => {
       id: 6,
       link: "Journey",
       path: "/journey",
-      style: "text-yellow-500"
+      styleBefore:
+        "underline underline-offset-4 text-yellow-500 decoration-blue-500 decoration-wavy decoration-thickness-2 decoration-slice-1",
     },
   ];
 
@@ -43,12 +44,12 @@ const NavBar = () => {
         </div>
 
         <ul className="hidden md:flex">
-          {links.map(({ id, link, path, style }) => {
+          {links.map(({ id, link, path, styleBefore }) => {
             if (path) {
               return (
                 <li
                   key={id}
-                  className={`px-4 cursor-pointer capitalize font-medium ${style} hover:scale-105 hover:text-pink-50 duration-200`}
+                  className={`px-4 cursor-pointer capitalize font-medium ${styleBefore} hover:scale-105 hover:text-blue-500 hover:decoration-yellow-500 duration-200`}
                 >
                   <Link to={path} duration={500}>
                     {link}
