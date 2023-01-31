@@ -1,32 +1,31 @@
 import React from "react";
-import useState from "../../assets/portfolio/usestate.jpg";
 
 const WorkExperiences = () => {
   const workExperiences = [
     {
       id: 1,
-      src: useState,
+      src: "https://raw.githubusercontent.com/Nguyenle23/Hotel-Management-System/main/src/public/img/ill_img.png",
       alt: "Calculator-For-T.M.C",
       demo: "",
       code: "https://github.com/Nguyenle23/Calculator-For-T.M.C",
     },
     {
       id: 2,
-      src: useState,
+      src: "https://raw.githubusercontent.com/Nguyenle23/Hotel-Management-System/main/src/public/img/ill_img.png",
       alt: "react-onmovie",
       demo: "",
       code: "https://github.com/Nguyenle23/react-onmovie",
     },
     {
       id: 3,
-      src: useState,
+      src: "https://raw.githubusercontent.com/Nguyenle23/Hotel-Management-System/main/src/public/img/ill_img.png",
       alt: "WAD-Project-Course",
       demo: "",
       code: "https://github.com/Nguyenle23/WAD-Project-Course",
     },
     {
       id: 4,
-      src: useState,
+      src: "https://raw.githubusercontent.com/Nguyenle23/Hotel-Management-System/main/src/public/img/ill_img.png",
       alt: "EcommerceWebsite_nodejs",
       demo: "https://glamourous-shop.herokuapp.com/",
       code: "https://github.com/Nguyenle23/EcommerceWebsite_nodejs",
@@ -40,7 +39,7 @@ const WorkExperiences = () => {
     },
     {
       id: 6,
-      src: useState,
+      src: "https://raw.githubusercontent.com/Nguyenle23/Hotel-Management-System/main/src/public/img/ill_img.png",
       alt: "OOP-Project-Course",
       demo: "",
       code: "https://github.com/Nguyenle23/OOP-Project-Course",
