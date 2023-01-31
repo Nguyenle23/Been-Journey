@@ -8,11 +8,11 @@ import { getAlbums } from "../../apis";
 
 const Journey = () => {
   const menus = [
-    { name: "Journey", link: "/journey", icon: MdOutlineDashboard },
-    { name: "People", link: "/", icon: AiOutlineUser },
-    { name: "Event", link: "/", icon: RiCastFill },
-    { name: "Saved", link: "/", icon: AiOutlineHeart, margin: true },
-    { name: "Setting", link: "/", icon: RiSettings4Line },
+    { name: "Albums", link: "/journey", icon: MdOutlineDashboard },
+    // { name: "People", link: "/", icon: AiOutlineUser },
+    // { name: "Event", link: "/", icon: RiCastFill },
+    // { name: "Saved", link: "/", icon: AiOutlineHeart, margin: true },
+    // { name: "Setting", link: "/", icon: RiSettings4Line },
   ];
   const [open, setOpen] = useState(true);
   const [albums, setAlbums] = useState([]);
