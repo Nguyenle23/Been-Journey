@@ -4,7 +4,7 @@ import { MdOutlineDashboard } from "react-icons/md";
 import { RiSettings4Line, RiCastFill } from "react-icons/ri";
 import { AiOutlineUser, AiOutlineHeart } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import { loginWithGoogle } from "../../apis";
+import { getAlbums } from "../../apis";
 
 const Journey = () => {
   const menus = [
@@ -15,58 +15,17 @@ const Journey = () => {
     { name: "Setting", link: "/", icon: RiSettings4Line },
   ];
   const [open, setOpen] = useState(true);
+  const [albums, setAlbums] = useState([]);
 
-  const resources = [
-    {
-      id: "1",
-      name: "Flower",
-      src: "https://res.cloudinary.com/nguyenle23/image/upload/v1647678698/sample.jpg",
-      alt: "Flower",
-    },
-    {
-      id: "2",
-      name: "Flower",
-      src: "https://res.cloudinary.com/nguyenle23/image/upload/v1647678698/sample.jpg",
-      alt: "Flower",
-    },
-    {
-      id: "3",
-      name: "Flower",
-      src: "https://res.cloudinary.com/nguyenle23/image/upload/v1647678698/sample.jpg",
-      alt: "Flower",
-    },
-    {
-      id: "4",
-      name: "Flower",
-      src: "https://res.cloudinary.com/nguyenle23/image/upload/v1647678698/sample.jpg",
-      alt: "Flower",
-    },
-    {
-      id: "5",
-      name: "Flower",
-      src: "https://res.cloudinary.com/nguyenle23/image/upload/v1647678698/sample.jpg",
-      alt: "Flower",
-    },
-    {
-      id: "6",
-      name: "Flower",
-      src: "https://res.cloudinary.com/nguyenle23/image/upload/v1647678698/sample.jpg",
-      alt: "Flower",
-    },
-    {
-      id: "7",
-      name: "Flower",
-      src: "https://res.cloudinary.com/nguyenle23/image/upload/v1647678698/sample.jpg",
-      alt: "Flower",
-    },
-  ];
-
-  const handleSignIn = (e) => {
-    e.preventDefault();
-    loginWithGoogle().then((res) => {
-      window.location.href = res;
+  useEffect(() => {
+    getAlbums().then((res) => {
+      setAlbums(res.data);
     });
-  };
+  }, []);
+
+  // const handleSignIn = () => {
+  //   window.open("http://localhost:5000/auth", "_Self");
+  // };
 
   return (
     <section className="flex gap-6 bg-gray-800">
@@ -119,25 +78,26 @@ const Journey = () => {
           open ? "ml-64 mr-8" : "ml-32"
         } duration-500`}
       >
-        <div>
-          <button
+        {/* <div>
+          <div
             onClick={handleSignIn}
             className="text-white mb-4 p-4 bg-slate-500 hover:bg-slate-600"
           >
             SignIn
-          </button>
-        </div>
+          </div>
+        </div> */}
         <div className="grid grid-cols-1 gap-6 mb-6 lg:grid-cols-3">
-          {resources?.map(({ id, name, src, alt }) => (
+          {albums?.map(({ _id, title, productUrl, coverPhotoBaseUrl }) => (
             <div
-              key={id}
-              className="w-full px-4 py-5 bg-[#0f0f1a] rounded-lg shadow"
+              key={_id}
+              className="group w-full px-4 py-5 bg-[#0f0f1a] rounded-lg shadow hover:bg-gray-500 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 hover:cursor-pointer"
+              onClick={() => window.open(productUrl, "_blank")}
             >
-              <div className="text-sm font-medium text-gray-500 truncate">
-                {name}
+              <div className="text-sm font-medium text-gray-500 truncate group-hover:text-white hover:font-bold ">
+                {title}
               </div>
               <div className="mt-1 text-3xl font-semibold text-gray-900">
-                <img src={src} alt={alt} />
+                <img src={coverPhotoBaseUrl} alt={title} />
               </div>
             </div>
           ))}
