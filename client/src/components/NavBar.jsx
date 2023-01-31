@@ -31,6 +31,7 @@ const NavBar = () => {
       id: 6,
       link: "Journey",
       path: "/journey",
+      style: "text-yellow-500"
     },
   ];
 
@@ -42,12 +43,12 @@ const NavBar = () => {
         </div>
 
         <ul className="hidden md:flex">
-          {links.map(({ id, link, path }) => {
+          {links.map(({ id, link, path, style }) => {
             if (path) {
               return (
                 <li
                   key={id}
-                  className="px-4 cursor-pointer capitalize font-medium text-white-500 hover:scale-105 hover:text-gray-500 duration-200"
+                  className={`px-4 cursor-pointer capitalize font-medium ${style} hover:scale-105 hover:text-pink-50 duration-200`}
                 >
                   <Link to={path} duration={500}>
                     {link}
