@@ -15,7 +15,7 @@ const HomePage = () => {
       <Introduce />
       <About />
       <WorkExperiences />
-      <Experience />
+      {/* <Experience /> */}
       <Contact />
 
       <SocialLinks />
