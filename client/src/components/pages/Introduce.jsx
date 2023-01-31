@@ -15,7 +15,7 @@ const Introduce = () => {
             Welcome to Been's journey!
           </h2>
           <p className="text-gray-500 py-4 max-w-md">
-            A gallery, a collection of my projects and experiences
+            ---- A collection of my projects and experiences ----
           </p>
 
           <div>
