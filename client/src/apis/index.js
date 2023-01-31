@@ -17,5 +17,5 @@ import axios from 'axios';
 // }
 
 export const getAlbums = async (req, res) => {
-    return await axios.get('http://localhost:5000/album');
+    return await axios.get('https://journey-gallery.onrender.com/album');
 }
