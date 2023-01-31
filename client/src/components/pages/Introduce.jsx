@@ -12,15 +12,10 @@ const Introduce = () => {
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
         <div className="flex flex-col justify-center h-full">
           <h2 className="text-4xl sm:text-7xl font-bold text-white">
-            Welcome to my portfolio!
+            Welcome to Been's journey!
           </h2>
           <p className="text-gray-500 py-4 max-w-md">
-            My name is Nguyen Le a.k.a Been . I am a senior studying at
-            Internation University - VNU. I am interested in technology and
-            willing to figure out how it works. Until now, I have had a lot of
-            opportunities to work in developing Back-end web. Besides, I am
-            learning on my own path to expand more knowledge about implementing
-            AI to reality.
+            A gallery, a collection of my projects and experiences
           </p>
 
           <div>
