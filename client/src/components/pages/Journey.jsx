@@ -86,6 +86,11 @@ const Journey = () => {
             SignIn
           </div>
         </div> */}
+        <div className="pb-6">
+          <h1 className="text-white text-center uppercase font-bold">
+            All memories that I colleted through each stage in my life
+          </h1>
+        </div>
         <div className="grid grid-cols-1 gap-6 mb-6 lg:grid-cols-3">
           {albums?.map(({ _id, title, productUrl, coverPhotoBaseUrl }) => (
             <div
@@ -101,6 +106,15 @@ const Journey = () => {
               </div>
             </div>
           ))}
+        </div>
+        <div className="pt-72">
+          <p className="text-gray-600 text-center opacity-40 lowercase">
+            --- Wait for second until the cover appears ---
+          </p>
+
+          <h3 className="text-gray-600 font-bold text-center uppercase">
+            In Developing Stage
+          </h3>
         </div>
       </div>
     </section>
