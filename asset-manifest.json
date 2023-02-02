@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/journey-gallery/static/css/main.37cb2fab.css",
-    "main.js": "/journey-gallery/static/js/main.73111ab2.js",
+    "main.css": "/journey-gallery/static/css/main.597ef8ed.css",
+    "main.js": "/journey-gallery/static/js/main.97489662.js",
     "static/media/hotel.png": "/journey-gallery/static/media/hotel.9af0a100036298c0579e.png",
     "static/media/game.png": "/journey-gallery/static/media/game.f9f23cf1a166377072ba.png",
     "static/media/heroImage.jpg": "/journey-gallery/static/media/heroImage.d9dffe03b699d2fc4459.jpg",
@@ -9,11 +9,11 @@
     "static/media/reactOnMovie.png": "/journey-gallery/static/media/reactOnMovie.df77ee9df02012016029.png",
     "static/media/css.png": "/journey-gallery/static/media/css.69a82c2d9e45c933a9cb.png",
     "index.html": "/journey-gallery/index.html",
-    "main.37cb2fab.css.map": "/journey-gallery/static/css/main.37cb2fab.css.map",
-    "main.73111ab2.js.map": "/journey-gallery/static/js/main.73111ab2.js.map"
+    "main.597ef8ed.css.map": "/journey-gallery/static/css/main.597ef8ed.css.map",
+    "main.97489662.js.map": "/journey-gallery/static/js/main.97489662.js.map"
   },
   "entrypoints": [
-    "static/css/main.37cb2fab.css",
-    "static/js/main.73111ab2.js"
+    "static/css/main.597ef8ed.css",
+    "static/js/main.97489662.js"
   ]
 }
