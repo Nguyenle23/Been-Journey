@@ -113,7 +113,7 @@ const Journey = () => {
           </p>
 
           <h3 className="text-gray-600 font-bold text-center uppercase">
-            In Developing Stage
+            <Link to="/journey-gallery" className="border-b-2 border-gray-500 hover:text-white duration-200 hover:border-white">Back to Homepage</Link>
           </h3>
         </div>
       </div>
