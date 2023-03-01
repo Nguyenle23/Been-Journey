@@ -17,7 +17,7 @@ const NavBar = () => {
     },
     {
       id: 3,
-      link: "Work Experiences",
+      link: "Journey",
     },
     // {
     //   id: 4,
@@ -27,11 +27,11 @@ const NavBar = () => {
       id: 5,
       link: "Contact",
     },
-    {
-      id: 6,
-      link: "Journey",
-      path: "/journey",
-    },
+    // {
+    //   id: 6,
+    //   link: "Journey",
+    //   path: "/journey",
+    // },
   ];
 
   return (

@@ -22,12 +22,22 @@ const About = () => {
           to reality.
         </p>
 
-        <br />
+        <p className="text-xl mt-5 mb-5">
+          I am a person who is always ask questions about how things work. I have always been drawn to technology 
+          and its potential to solve real-world problems. In addition to my academic pursuits, I have also been involved in various 
+          extracurricular activities related to computer science. For example, I have participated in hackathons, 
+          where I worked with a team to build a website solution for specific topic. 
+        </p>
+
+        <p className="text-xl mb-5">
+        Looking to the future, I am excited to continue developing my skills and knowledge in computer science. 
+        I hope to use my expertise to create technology that can make a positive impact on society, whether it be through 
+        developing innovative software solutions or building cutting-edge computer systems.
+        </p>
 
         <p className="text-xl">
-          I used to build and develop some projects with my friends. Those are
-          below this section. Thank you for check out my portfolio. If you have
-          any questions, please feel free to contact me. 
+          Thank you for taking the time to read my introduction. If you have
+          any questions, please feel free to contact me at the bottom of the page.
         </p>
       </div>
     </div>
