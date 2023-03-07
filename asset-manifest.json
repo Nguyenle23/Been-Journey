@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Been-journey/static/css/main.e8bb1257.css",
-    "main.js": "/Been-journey/static/js/main.403f171b.js",
-    "static/media/hotel.png": "/Been-journey/static/media/hotel.9af0a100036298c0579e.png",
-    "static/media/game.png": "/Been-journey/static/media/game.f9f23cf1a166377072ba.png",
-    "static/media/heroImage1.jpg": "/Been-journey/static/media/heroImage1.1cf0f1ffb3891b877264.jpg",
-    "static/media/app_cal.png": "/Been-journey/static/media/app_cal.cdcf8bd7e5024337b876.png",
-    "static/media/reactOnMovie.png": "/Been-journey/static/media/reactOnMovie.df77ee9df02012016029.png",
-    "static/media/css.png": "/Been-journey/static/media/css.69a82c2d9e45c933a9cb.png",
-    "index.html": "/Been-journey/index.html",
-    "main.e8bb1257.css.map": "/Been-journey/static/css/main.e8bb1257.css.map",
-    "main.403f171b.js.map": "/Been-journey/static/js/main.403f171b.js.map"
+    "main.css": "/Been-Journey/static/css/main.e8bb1257.css",
+    "main.js": "/Been-Journey/static/js/main.60448872.js",
+    "static/media/hotel.png": "/Been-Journey/static/media/hotel.9af0a100036298c0579e.png",
+    "static/media/game.png": "/Been-Journey/static/media/game.f9f23cf1a166377072ba.png",
+    "static/media/heroImage1.jpg": "/Been-Journey/static/media/heroImage1.1cf0f1ffb3891b877264.jpg",
+    "static/media/app_cal.png": "/Been-Journey/static/media/app_cal.cdcf8bd7e5024337b876.png",
+    "static/media/reactOnMovie.png": "/Been-Journey/static/media/reactOnMovie.df77ee9df02012016029.png",
+    "static/media/css.png": "/Been-Journey/static/media/css.69a82c2d9e45c933a9cb.png",
+    "index.html": "/Been-Journey/index.html",
+    "main.e8bb1257.css.map": "/Been-Journey/static/css/main.e8bb1257.css.map",
+    "main.60448872.js.map": "/Been-Journey/static/js/main.60448872.js.map"
   },
   "entrypoints": [
     "static/css/main.e8bb1257.css",
-    "static/js/main.403f171b.js"
+    "static/js/main.60448872.js"
   ]
 }
